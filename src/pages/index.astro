@@ -1,0 +1,76 @@
+---
+// Component Imports
+import MainHead from '../components/MainHead.astro';
+import Button from '../components/Button/index.jsx';
+import Nav from '../components/Nav/index.jsx';
+import Footer from '../components/Footer/index.jsx';
+import PorfolioPreview from '../components/PortfolioPreview/index.jsx';
+import { Markdown } from 'astro/components';
+
+// Data Fetching: List all Markdown posts in the repo.
+const projects = Astro.fetchContent('./project/*.md');
+
+
+---
+<html lang="en">
+  <head>
+    <MainHead title="Matias Bojko | Portafolio" />
+    <style lang="scss">
+     .hero{
+       margin-left: 10%;
+     }
+     .title {
+       font-size: var(--f-u11);
+     }
+     .subtitle {
+       font-size: var(--f-u4);
+       margin-left: 25%;
+     }
+     .inner {
+       margin-left: 2rem;
+     }
+     .md {
+       margin-top: 5rem;
+       margin-left: 5rem;
+       margin-right: 5rem;
+       display: flex;
+       justify-content: space-between;
+     }
+     .md-section {
+       width: 50%;
+     }
+  
+    </style>
+  </head>
+  <body>
+    <Nav />
+    <header class="hero">
+      <div class="title">Mati&#769;as Bojko</div>
+      <div class="subtitle">Software Engineer</div>
+    </header>
+    <main class="wrapper mt4 mb4">
+      <div class="md">
+        <div class="md-section">
+          <Markdown>
+          ### Education
+          ---
+          2019 - Sape
+          <br>
+          
+          ### Expirience
+          
+          I was born and raised in Argentina
+          </Markdown>
+        </div>
+        <div class="md-section">
+          <Markdown>
+          ### Skills
+          ---
+         
+          </Markdown>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
