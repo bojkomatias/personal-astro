@@ -4,8 +4,8 @@ import Styles from './styles.module.scss';
 function Nav() {
   return (
     <nav className={Styles.nav}>
-      <a className={Styles.logolink} href="/">
-        <div>MATIAS BOJKO</div>
+      <a className={Styles.link} href="/">
+        <div>Home</div>
       </a>
       <a className={Styles.link} href="projects">
         Projects

@@ -35,11 +35,21 @@ const projects = Astro.fetchContent('./project/*.md');
        margin-right: 5rem;
        display: flex;
        justify-content: space-between;
+       line-height: 3rem;
      }
      .md-section {
        width: 50%;
      }
+     .skills {
+       display: grid;
+       width: 90%;
+       grid-template-columns: 1fr 1fr;
+       margin-top: 1rem;
+       margin-left: 10%;
+     }
   
+     
+    
     </style>
   </head>
   <body>
@@ -58,7 +68,7 @@ const projects = Astro.fetchContent('./project/*.md');
           <br>
           
           ### Expirience
-          
+          ---
           I was born and raised in Argentina
           </Markdown>
         </div>
@@ -66,8 +76,18 @@ const projects = Astro.fetchContent('./project/*.md');
           <Markdown>
           ### Skills
           ---
-          
           </Markdown>
+          <div class="skills">
+            <div>JavaScript</div>
+            <progress value="87" max="100" />
+
+            <div>Vue</div>
+            <progress value="85" max="100" />
+            <div>React</div>
+            <progress value="78" max="100"/>
+            <div>Fauna DB</div>
+            <progress value="34" max="100" />
+          </div>       
         </div>
       </div>
     </main>

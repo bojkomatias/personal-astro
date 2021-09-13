@@ -8,16 +8,6 @@
   padding-left: 2rem;
 }
 
-.logolink {
-  display: block;
-  color: var(--t-fg);
-  text-decoration: none;
-  &:focus,
-  &:hover {
-    text-decoration: line-through;
-  }
-}
-
 .link {
   color: var(--t-subdue);
   display: block;
@@ -27,10 +17,10 @@
   text-transform: uppercase;
   padding-top: 0.75em;
   padding-bottom: 0.75em;
-
   &:focus,
   &:hover {
-    color: var(--t-active);
+    text-decoration: line-through;
+    color: var(--t-fg);
   }
 }
 
@@ -51,6 +41,6 @@
   transition: fill linear 150ms;
 
   &:hover {
-    fill: var(--t-active);
+    fill: var(--t-fg);
   }
 }
