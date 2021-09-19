@@ -9,8 +9,7 @@ import { Markdown } from 'astro/components';
 
 // Data Fetching: List all Markdown posts in the repo.
 const projects = Astro.fetchContent('./project/*.md');
-
-
+const age =  new Date().getFullYear() - 1997
 ---
 <html lang="en">
   <head>
@@ -55,25 +54,20 @@ const projects = Astro.fetchContent('./project/*.md');
        margin-top: 1rem;
        gap: 1rem;
      }
-  
-     
-    
     </style>
   </head>
   <body>
     <Nav />
     <header class="hero">
       <div class="title">Mati&#769;as Bojko</div>
-      <div class="subtitle">Software Engineer</div>
+      <div class="subtitle">Software Engineer and Developer</div>
     </header>
     <main class="wrapper mt4 mb4">
     <div class="description">
      <Markdown>
-         I'm 24 years old, currently living in Argentina.    
-         Don't know what to do with my life so I'm doing this, at least the only thing I enjoy in this life.  Hope I don't Kermit 🐸. 
-         
-         I like to drink mate 🧉 (*typical argentian beverage*) while coding 💻.
-            
+         I'm Mati&#769;as Bojko, currently {age} years of age and was born and raised on Argentina. I'm a computer science graduate from Universidad Adventista del Plata.
+         I like to code and build new systems often, while also learning new tecnologies.  
+         I hope you find this portfolio intersting and inspiring, if you need to contact me try my Linked In or E-mail me.
       </Markdown>
     </div>
       <div class="md">
